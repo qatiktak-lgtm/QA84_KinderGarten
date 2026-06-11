@@ -22,6 +22,24 @@ public class MainKinderGarden {
         Parent p8 = new Parent("Ashley Davis", 208, "+1-555-0198", "258 Chestnut Court, San Francisco");
         Parent p9 = new Parent("Robert Rodriguez", 209, "+1-555-0199", "369 Willow Way, Houston");
         Parent p10 = new Parent("Amanda Martinez", 210, "+1-555-0120", "741 Cherry Lane, Phoenix");
+
+        Garden garden = new Garden("Sun", "Berlin, Herzel, 4", "+49156444222", "Anna Coen");
+        garden.addChildToGarden(c10,p10);
+        garden.addChildToGarden(c9,p9);
+        garden.addChildToGarden(c8,p8);
+        garden.addChildToGarden(c7,p7);
+        garden.addChildToGarden(c6,p6);
+        garden.addChildToGarden(c5,p5);
+        garden.addChildToGarden(c4,p4);
+        garden.addChildToGarden(c3,p3);
+        garden.addChildToGarden(c2,p2);
+        garden.addChildToGarden(c1,p1);
+
+//        garden.printChildren();
+//        garden.addChildToGarden(c6,p6);
+
+        garden.removeChildFromGarden(109);
+        garden.printChildren();
     }
 }
 

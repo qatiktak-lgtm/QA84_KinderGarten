@@ -66,18 +66,20 @@ public class Garden {
         boolean isExists = children.containsKey(c);
         if (isExists == false) {
             children.put(c, p);
-            System.out.println(c.getName() + "Added !!!");
-        } else
-//            System.out.println(c);
-//            System.out.println(с + "Already exists !!!");
-            System.out.println(c.getName() + ": already exist!!!");
+            //System.out.println(c.getName() + "Added !!!");
+        }
+        else
+            System.out.println(c + "Already exists !!!");
+//            System.out.println(c.getName() + ": already exist!!!");
     }
 
     public void printChildren() {
+        System.out.println("~".repeat(30));
         System.out.println("Garten : " + name);
         System.out.println("Address : " + address);
         System.out.println("Phone : " + phone);
         System.out.println("Director : " + director);
+        System.out.println("~".repeat(30));
         System.out.println("\t\tChildren: ");
         Set<Child> keys = children.keySet();
         for (Child key : keys) {
@@ -85,7 +87,21 @@ public class Garden {
             Parent value = children.get(key);
             System.out.println("Parent: " + value);
         }
-        System.out.println("~".repeat(80));
+        System.out.println("~".repeat(100));
+    }
+
+    public void removeChildFromGarden(int id) {
+        Set<Child> keys = children.keySet();
+        for (Child key : keys) { // key - это наш ребенок
+            if (key.getId() == id) {
+                children.remove(key);
+                System.out.println("#".repeat(30));
+                System.out.println(key.getName());
+                System.out.println("Removed !!!");
+                return;
+            }
+        }
+            System.out.println("Error: wrong ID");
     }
 
 }
